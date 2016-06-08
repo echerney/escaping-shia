@@ -1,8 +1,10 @@
 # escaping-shia
-Used for GA WDI Project 1
+My game will be an interactive maze that will ask the user to solve simple math and puzzle problems quickly to keep them away from Shia LeBouf chasing them. I'd also like to figure out a way to start the game with a gif of the beginning of the video over the game screen.
 
-As a potential player, I want the game to help me with simple math and puzzles.
+# WIREFRAMING:
+___
 
-I want the game to become more difficult as you get farther along.
 
-I want the game to be reliant on speed and accuracy of answers.
+##You are walking in the woods...
+
+
