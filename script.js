@@ -45,26 +45,13 @@ function movePlayer() {
 }
 
 
-
-function warnPlayer() {
-  var wheresShia = parseInt($('.shia').attr('id').replace('b',''));
-  var whereamI = parseInt($('.player').attr('id').replace('b',''));
-  if (whereamI - wheresShia <= 2) {
-    $("#warning").fadeIn()
-  } else if (whereamI - wheresShia <= 0) {
-    $('#gamewindow').removeClass('playing')
-    shiaWins = true;
-    alert("Looks like you've been eaten by Shia LeBouf.");
-  }
-};
-
 function checkForWin() {
   var wheresShia = parseInt($('.shia').attr('id').replace('b',''));
   var whereamI = parseInt($('.player').attr('id').replace('b',''));
-  if (whereamI - wheresShia <= 2) {
-    $("#warning").fadeIn()
-  } else if (whereamI - wheresShia <= 0) {
-    $('#gamewindow').removeClass('playing')
+  // while (whereamI - wheresShia <= 1) {
+  //   $("#warning").fadeIn().fadeOut().fadeIn().fadeOut()
+  // };
+  if (whereamI == wheresShia) {
     alert("Looks like you've been eaten by Shia LeBouf.");
   } else if (whereamI == 16) {
     alert("You've escaped Actual Cannibal Shia Lebouf!")
