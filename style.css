@@ -1,0 +1,54 @@
+body {
+  text-align: center;
+}
+
+div {
+  margin: 0 auto;
+  border-style: solid;
+  border-color: black;
+  border-width: 4px;
+}
+
+h1 {
+  font-size: 40px;
+  font-family: 'Walter Turncoat';
+}
+
+h2 {
+  font-family: 'Walter Turncoat';
+  font-size: 15px;
+}
+
+h3 {
+  font-family: 'Walter Turncoat';
+}
+
+#puzzle {
+  width: 400px;
+  height: 250px;
+  background-color: lightpink;
+  position: relative;
+  top: 15px;
+}
+
+#maze {
+  position: relative;
+  top: 45px;
+  width: 550px;
+}
+
+#gameWindow {
+  background-color: slateblue;
+  position: relative;
+  height: 800px;
+}
+table {
+  margin: 0 auto;
+  background-image: url("http://freebigpictures.com/wp-content/uploads/2009/09/forest-path.jpg");
+  background-size: cover;
+
+}
+td {
+  height: 20px;
+  width: 20px;
+}
