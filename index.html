@@ -5,16 +5,17 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Escaping Shia</title>
   <link href='https://fonts.googleapis.com/css?family=Walter+Turncoat' rel='stylesheet' type='text/css'>
- <!--  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
   <link rel="stylesheet" href="http://s.mlcdn.co/animate.css">
   <link rel="stylesheet" href="style.css">
   <script type='text/javascript' src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
   <script type="text/javascript" src="script.js"></script>
 </head>
 <body>
+<div class="container" id="game">
   <h1>You're walking through the woods...</h1>
-  <div id="gamewindow" class = "playing">
-    <div id="puzzle">
+  <div class="row">
+    <div id="puzzle" class="four column">
       <h2 id="question">This is where the puzzle will run.</h2>
       <input type="text"> <button>Submit</button>
       <section>
@@ -22,7 +23,7 @@
       </section>
       <h3 id="warning">He's gaining on you!</h3>
     </div>
-    <div id="maze">
+    <div id="maze" class="eight column">
       <table>
         <tr>
           <td class = "shia" id="b1"></td>
@@ -51,5 +52,6 @@
       </table>
     </div>
   </div>
+</div>
 </body>
 </html>
