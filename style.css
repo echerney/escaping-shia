@@ -1,17 +1,13 @@
 body {
   text-align: center;
-}
-
-div {
-  margin: 0 auto;
-  border-style: solid;
-  border-color: black;
-  border-width: 4px;
+  background-image: url("http://www.kokean.com/i/creepy-forest-wallpaper-background.jpg");
+  background-size: cover;
 }
 
 h1 {
-  font-size: 40px;
+  font-size: 60px;
   font-family: 'Walter Turncoat';
+  color: #E1E1E1;
 }
 
 h2 {
@@ -21,6 +17,10 @@ h2 {
 
 h3 {
   font-family: 'Walter Turncoat';
+}
+
+th td {
+  border-style:none;
 }
 
 #wrong {
@@ -46,32 +46,25 @@ button {
 }
 
 #puzzle {
-  width: 400px;
+  width: 300px;
   height: 250px;
-  background-color: lightpink;
+  background-color: darkcyan;
   position: relative;
-  top: 15px;
+  display:block;
 }
 
 #maze {
   border-style: none;
   position: relative;
-  top: 45px;
-  width: 700px;
-}
-
-#gameWindow {
-  background-color: slateblue;
-  position: relative;
-  height: 800px;
+  width: 600px;
+  display:block;
 }
 
 table {
   table-layout: fixed;
   margin: 0 auto;
-  background-image: url("http://freebigpictures.com/wp-content/uploads/2009/09/forest-path.jpg");
-  background-size: cover;
   border: solid black 2px;
+  background-color: darkcyan;
 }
 
 td {
