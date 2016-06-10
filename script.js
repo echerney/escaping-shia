@@ -1,5 +1,5 @@
 $(document).ready(function(){
-  console.log("connected");
+  console.log("connected")
 
   //there will be an array of questions and an array of answers, with matching indexes
 var qArray = ['1', '2', '3', '4', '5', '6', '7']
