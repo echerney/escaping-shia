@@ -46,11 +46,11 @@ function checkForWin() {
   var wheresShia = parseInt($('.shia').attr('id').replace('b',''));
   var whereamI = parseInt($('.player').attr('id').replace('b',''));
   if (whereamI == wheresShia) {
-    alert("Looks like you've been eaten by Shia LeBouf.");
     endGame();
+    shiaWins();
   } else if (whereamI == 16) {
-    alert("You've escaped Actual Cannibal Shia Lebouf!")
     endGame();
+    $("#clapping").show();
   } else if (whereamI - wheresShia <= 1) {
     $("#warning").fadeIn();
     $("#game").addClass("animated shake");
@@ -64,8 +64,12 @@ function endGame() {
   $('.shia').removeClass('shia');
   $('.player').removeClass('player');
   $('#game').removeClass('playing');
-  //show the end video?
+  $('#video').remove();
 };
+
+function shiaWins() {
+
+}
 
 function bearTrap() {
   var whereamI = parseInt($('.player').attr('id').replace('b',''));
@@ -76,12 +80,12 @@ function bearTrap() {
       if (ans2 == "1") {
         console.log('continue playing')
       } else {
-        alert("Looks like you've been eaten by Shia LeBouf.")
         endGame();
+        shiaWins();
       }
     } else {
-      alert("Looks like you've been eaten by Shia LeBouf.")
       endGame();
+      shiaWins();
     }
   } else {
     console.log("going")
@@ -102,13 +106,15 @@ function bearTrap() {
 setTimeout(function() {
   $("#video").hide();
   $('#game').addClass('playing');
-}, 3000);
+}, 18000);
 
-
-while ($('#game').hasClass('playing') == true) {
-  window.setInterval(moveShia, 8000);
-  showQuestion();
-  compareAnswer();
-}
-
+setTimeout(function() {
+  if ($('#game').hasClass('playing') == true) {
+    window.setInterval(moveShia, 3500);
+    showQuestion();
+    compareAnswer();
+  } else {
+    console.log("uhoh");
+  }
+}, 19000);
 });
