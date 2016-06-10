@@ -38,6 +38,7 @@ function movePlayer() {
   var nextID = "#b" + (prevPos + 1);
   $(nextID).addClass('player');
   setTimeout($(prevID).removeClass('player'), 30);
+  bearTrap();
 }
 
 
@@ -66,7 +67,14 @@ function endGame() {
   //show the end video?
 };
 
-
+function bearTrap() {
+  var whereamI = parseInt($('.player').attr('id').replace('b',''));
+  if (whereamI == 14) {
+    var answer = prompt("Oh no! You're caught!")
+  } else {
+    console.log("going")
+  }
+}
 
 // shia moves on a timer, fades in and out of each box.
 // Also checks position to give warning or end game
