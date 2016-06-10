@@ -4,47 +4,51 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Escaping Shia</title>
-  <link rel="stylesheet" href="style.css">
   <link href='https://fonts.googleapis.com/css?family=Walter+Turncoat' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
+ <!--  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css"> -->
   <link rel="stylesheet" href="http://s.mlcdn.co/animate.css">
+  <link rel="stylesheet" href="style.css">
   <script type='text/javascript' src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
   <script type="text/javascript" src="script.js"></script>
 </head>
 <body>
   <h1>You're walking through the woods...</h1>
-  <div id="gameWindow">
+  <div id="gamewindow" class = "playing">
     <div id="puzzle">
-      <h2>This is where the puzzle will run.</h2>
-      <input type="text">
+      <h2 id="question">This is where the puzzle will run.</h2>
+      <input type="text"> <button>Submit</button>
+      <section>
+        <img id="wrong" src="http://www.clipartbest.com/cliparts/bTy/EzA/bTyEzAoXc.png">
+      </section>
       <h3 id="warning">He's gaining on you!</h3>
     </div>
     <div id="maze">
       <table>
         <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td class = "shia" id="b1"></td>
+          <td class = "player" id="b2"></td>
+          <td class = "" id="b3"></td>
+          <td class = "" id="b4"></td>
         </tr>
         <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td class = "" id="b8"></td>
+          <td class = "" id="b7"></td>
+          <td class = "" id="b6"></td>
+          <td class = "" id="b5"></td>
         </tr>
         <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td class = "" id="b9"></td>
+          <td class = "" id="b10"></td>
+          <td class = "" id="b11"></td>
+          <td class = "" id="b12"></td>
         </tr>
         <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td class = "" id="b16"></td>
+          <td class = "" id="b15"></td>
+          <td class = "" id="b14"></td>
+          <td class = "" id="b13"></td>
         </tr>
+      </table>
     </div>
   </div>
 </body>
