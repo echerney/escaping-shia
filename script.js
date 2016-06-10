@@ -69,12 +69,24 @@ function endGame() {
 
 function bearTrap() {
   var whereamI = parseInt($('.player').attr('id').replace('b',''));
-  if (whereamI == 14) {
-    var answer = prompt("Oh no! You're caught!")
+  if (whereamI == 15) {
+    var answer = prompt("But your leg! Ahh! It's caught in a bear trap! (What do you DO?)")
+    if(answer == "gnaw off your leg") {
+      var ans2 = prompt("1")
+      if (ans2 == "1") {
+        console.log('continue playing')
+      } else {
+        alert("Looks like you've been eaten by Shia LeBouf.")
+        endGame();
+      }
+    } else {
+      alert("Looks like you've been eaten by Shia LeBouf.")
+      endGame();
+    }
   } else {
     console.log("going")
   }
-}
+};
 
 // shia moves on a timer, fades in and out of each box.
 // Also checks position to give warning or end game
@@ -87,13 +99,16 @@ function bearTrap() {
     checkForWin();
   };
 
-if ($('#game').hasClass('playing')== true) {
-  window.setInterval(moveShia, 5000);
+setTimeout(function() {
+  $("#video").hide();
+  $('#game').addClass('playing');
+}, 3000);
+
+
+while ($('#game').hasClass('playing') == true) {
+  window.setInterval(moveShia, 8000);
   showQuestion();
   compareAnswer();
-} else {
-  console.log("done");
-
 }
 
 });
