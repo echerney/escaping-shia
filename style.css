@@ -17,10 +17,12 @@ h2 {
 
 h3 {
   font-family: 'Walter Turncoat';
+  font-size: 20px;
 }
 
-th td {
-  border-style:none;
+#cabin {
+  height: 80px;
+  width: 80px;
 }
 
 #wrong {
@@ -51,6 +53,7 @@ button {
   background-color: darkcyan;
   position: relative;
   display:block;
+    border: solid black 2px;
 }
 
 #maze {
@@ -81,38 +84,15 @@ td {
   background-size: cover;
   background-image: url("http://rs195.pbsrc.com/albums/z124/SylviaG_Photo/Smiley%20Faces/running20stick20man.gif~c200")
 }
-#b1{
+#b1, #b2, #b3, #b12, #b13, #b15, #b16{
   border-bottom: solid black 3px;
 }
 
-#b2{
-  border-bottom: solid black 3px;
+#b4, #b7, #b8, #b9, #b11, #b14{
+  border-bottom: none;
 }
 
-#b3{
-  border-bottom: solid black 3px;
-}
-
-#b5{
-  border-bottom: solid black 3px;
-}
-
-#b6{
-  border-bottom: solid black 3px;
-}
-
-#b7{
-  border-bottom: solid black 3px;
-}
-
-#b9{
-  border-bottom: solid black 3px;
-}
-
-#b10{
-  border-bottom: solid black 3px;
-}
-
-#b11{
-  border-bottom: solid black 3px;
+#b5, #b6, #b10{
+  border-bottom: none;
+  border-left: solid black 3px;
 }

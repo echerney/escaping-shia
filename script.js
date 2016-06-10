@@ -53,10 +53,10 @@ function checkForWin() {
     endGame();
   } else if (whereamI - wheresShia <= 1) {
     $("#warning").fadeIn();
-    $("#maze").addClass("animated shake");
+    $("#game").addClass("animated shake");
   } else {
     $("#warning").fadeOut();
-    $("#maze").removeClass("animated shake");
+    $("#game").removeClass("animated shake");
   };
 };
 
