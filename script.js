@@ -50,7 +50,7 @@ function movePlayer() {
   $(nextID).addClass('player');
   setTimeout($(prevID).removeClass('player'), 30);
   bearTrap();
-}
+};
 
 
 function checkForWin() {
@@ -61,7 +61,7 @@ function checkForWin() {
     shiaWins();
   } else if (whereamI == 16) {
     endGame();
-    $('#clapping').fadeIn();
+    $('#clapping').fadeIn('slow');
   } else if (whereamI - wheresShia <= 1) {
     $("#warning").fadeIn();
     $("#game").addClass("animated shake");
@@ -80,12 +80,13 @@ function endGame() {
 
 
 function shiaWins() {
-  alert("You have just been eaten by Shia Lebouf.")
-}
+  alert("You have just been eaten by Shia Lebouf.");
+};
 
 function bearTrap() {
   var whereamI = parseInt($('.player').attr('id').replace('b',''));
   if (whereamI == 15) {
+    $('#cabin').addClass('animated infinite pulse')
     var answer = prompt("But your leg! Ahh! It's caught in a bear trap! (What do you DO?)")
     if(answer == "gnaw off your leg") {
       var ans2 = prompt("Will you sucessfully gnaw your leg off?\nSolve for x: 7x + 13 = 55")

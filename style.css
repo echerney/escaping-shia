@@ -21,8 +21,8 @@ h3 {
 }
 
 #cabin {
-  height: 80px;
-  width: 80px;
+  height: 100px;
+  width: 100px;
 }
 
 #wrong {
@@ -41,10 +41,6 @@ input {
   height: 25px;
   font-size: 18px;
   text-align: center;
-}
-
-button {
-  display: inline;
 }
 
 #video {
@@ -85,8 +81,8 @@ table {
 }
 
 td {
-  height: 80px;
-  width: 80px;
+  height: 100px;
+  width: 100px;
 }
 
 .shia {
@@ -108,7 +104,7 @@ td {
   border-left: none;
 }
 
-#b5, #b6{
+#b5, #b6 {
   border-bottom: none;
   border-left: solid black 3px;
 }
