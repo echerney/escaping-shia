@@ -13,8 +13,6 @@ var aArray = ['22', '15', '39', '9', '66',
 '14', '43', '12', '24', '12',
 '30', '22', '9', '39', '5']
 
-  //the game start with the gif of the first part of the video, then alerts you that the game is starting
-
 
   //A math problem will show up in header 2. You can type in the answer and press enter to compare
 function showQuestion() {
