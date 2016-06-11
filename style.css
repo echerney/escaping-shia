@@ -47,13 +47,27 @@ button {
   display: inline;
 }
 
+#video {
+  position: absolute;
+  z-index:1;
+  top: -80px;
+  left: -400px;
+}
+
+#clapping{
+  display:none;
+  position: absolute;
+  z-index:1;
+  top: -80px;
+  left: -400px;
+}
 #puzzle {
   width: 300px;
   height: 250px;
   background-color: darkcyan;
   position: relative;
   display:block;
-    border: solid black 2px;
+  border: solid black 2px;
 }
 
 #maze {
@@ -77,6 +91,7 @@ td {
 
 .shia {
   background-size: cover;
+  opacity: 0.8;
   background-image: url("http://s3.amazonaws.com/thisismyjam/i/f48ef711bcb9adbc3b0e63e69cfa5bde.jpg?1336256520");
 }
 
@@ -88,11 +103,12 @@ td {
   border-bottom: solid black 3px;
 }
 
-#b4, #b7, #b8, #b9, #b11, #b14{
+#b4, #b7, #b8, #b9, #b10, #b11, #b14 {
   border-bottom: none;
+  border-left: none;
 }
 
-#b5, #b6, #b10{
+#b5, #b6{
   border-bottom: none;
   border-left: solid black 3px;
 }
