@@ -61,7 +61,7 @@ function checkForWin() {
     shiaWins();
   } else if (whereamI == 16) {
     endGame();
-    $("#clapping").show();
+    $('#clapping').fadeIn();
   } else if (whereamI - wheresShia <= 1) {
     $("#warning").fadeIn();
     $("#game").addClass("animated shake");
@@ -78,6 +78,7 @@ function endGame() {
   $('#video').remove();
 };
 
+
 function shiaWins() {
   alert("You have just been eaten by Shia Lebouf.")
 }
@@ -87,9 +88,11 @@ function bearTrap() {
   if (whereamI == 15) {
     var answer = prompt("But your leg! Ahh! It's caught in a bear trap! (What do you DO?)")
     if(answer == "gnaw off your leg") {
-      var ans2 = prompt("1")
-      if (ans2 == "1") {
+      var ans2 = prompt("Will you sucessfully gnaw your leg off?\nSolve for x: 7x + 13 = 55")
+      if (ans2 == "6") {
         console.log('continue playing')
+        $('.player').css('background-image', 'url("stumplegblue.jpg")');
+        $('.player').css('opacity', '0.7')
       } else {
         endGame();
         shiaWins();
@@ -119,7 +122,7 @@ setTimeout(function() {
   $('#game').addClass('playing');
 }, 18000);
 
-setTimeout(function() {
+$('input').click(function(){
   if ($('#game').hasClass('playing') == true) {
     window.setInterval(moveShia, 5500);
     showQuestion();
@@ -127,5 +130,6 @@ setTimeout(function() {
   } else {
     console.log("uhoh");
   }
-}, 21000);
+});
+
 });

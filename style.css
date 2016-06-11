@@ -4,7 +4,7 @@ body {
   background-size: cover;
 }
 
-#head {
+h1 {
   font-size: 60px;
   font-family: 'Walter Turncoat';
   color: #E1E1E1;
@@ -91,6 +91,7 @@ td {
 
 .shia {
   background-size: cover;
+  opacity: 0.8;
   background-image: url("http://s3.amazonaws.com/thisismyjam/i/f48ef711bcb9adbc3b0e63e69cfa5bde.jpg?1336256520");
 }
 
