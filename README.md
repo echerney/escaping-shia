@@ -2,7 +2,7 @@
 
 First off, my game will likely make no sense if you haven't seen the pop-culture classic, <a href="https://www.youtube.com/embed/o0u4M6vppCI">Rob Cantor's Shia Lebouf song.</a>
 
-My game is an interactive maze that will ask the user to solve simple math problems quickly to keep them away from Shia LeBouf chasing them. The game opens showing the song this game is based on, a silly creation of Rob Cantor painting a story of actor Shia Lebouf as a cannibal chasing the main character through a forest. When the game begins, the player is shown a question chosen randomly out of an array of 25 questions. When answered correctly, the player progresses one space in the maze. 
+My game is an interactive maze that will ask the user to solve simple math problems quickly to keep them away from Shia LeBouf, who is chasing them. The game opens showing the song this game is based on, a silly creation of Rob Cantor painting a story of actor Shia Lebouf as a cannibal chasing the main character through a forest. When the game begins, the player is shown a question chosen randomly out of an array of 25 questions. When answered correctly, the player progresses one space in the maze. 
 
 The maze is a table with the cells numbered by ID's of B and the number of the space in the maze. I first tried to make the ID just the number, but it created some problems with the CSS. In order to know where each character should move next, a jQuery function identifies the IDs of the character (identified by classes) and removes that class. It then removes the B and parses the string into a number, adds the B back to the ID and adds the class of the character to the cell with that ID. 
 
