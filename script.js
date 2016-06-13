@@ -70,12 +70,13 @@ function checkForWin() {
   };
 };
 
-//turns off video and ends the game
+//turns off video and ends the game. Stops Shia's movement.
 function endGame() {
   $('.shia').removeClass('shia');
   $('.player').removeClass('player');
   $('#game').removeClass('playing');
   $('#video').remove();
+  window.clearInterval(movingShia);
 };
 
 //alerts the player that they've lost.
@@ -128,7 +129,7 @@ setTimeout(function() {
 //starts game when the player puts the cursor in the input box.
 $('input').click(function(){
   if ($('#game').hasClass('playing') == true) {
-    window.setInterval(moveShia, 5500);
+    movingShia = window.setInterval(moveShia, 5500);
     showQuestion();
     compareAnswer();
   } else {
