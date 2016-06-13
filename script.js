@@ -1,7 +1,7 @@
 $(document).ready(function(){
   console.log("connected")
 
-  //there will be an array of questions and an array of answers, with matching indexes
+//there will be an array of questions and an array of answers, with matching indexes
 var qArray = ['17 + 5', '3 * 5', '16 + 23', '54 / 6', '12 + 54',
 '57 - 35', '22 - 8', '72 / 9', '5 * 5 * 3', '56 / 2',
 '18 - 9', '26 - 14', '45 / 15', '26 / 2', '24 / 8',
@@ -13,18 +13,16 @@ var aArray = ['22', '15', '39', '9', '66',
 '14', '43', '12', '24', '12',
 '30', '22', '9', '39', '5']
 
-  //the game start with the gif of the first part of the video, then alerts you that the game is starting
 
-
-  //A math problem will show up in header 2. You can type in the answer and press enter to compare
+//A math problem will show up in header 2. You can type in the answer and press enter to compare
 function showQuestion() {
   qNum = Math.floor(Math.random() * qArray.length);
   $('#question').text(qArray[qNum]);
 }
 
-  //if your answer matches the answer in the array, you move forward
-  //if not, it sets the inbox blank and shows up a red x next to your answer (show)
-  //checks for wins each time you progress.
+//if your answer matches the answer in the array, you move forward
+//if not, it sets the inbox blank and shows up a red x next to your answer
+//checks for wins each time you progress.
 function compareAnswer() {
   $('input').on('keypress', function(e){
     var keycode = (e.keyCode);
@@ -43,6 +41,7 @@ function compareAnswer() {
   })
 };
 
+//progresses the player one space in the maze
 function movePlayer() {
   var prevPos = parseInt($('.player').attr('id').replace('b',''));
   var prevID = "#b" + prevPos
@@ -50,9 +49,9 @@ function movePlayer() {
   $(nextID).addClass('player');
   setTimeout($(prevID).removeClass('player'), 30);
   bearTrap();
-}
+};
 
-
+//identifies the position of player and shia and warns the player or ends the game
 function checkForWin() {
   var wheresShia = parseInt($('.shia').attr('id').replace('b',''));
   var whereamI = parseInt($('.player').attr('id').replace('b',''));
@@ -61,7 +60,7 @@ function checkForWin() {
     shiaWins();
   } else if (whereamI == 16) {
     endGame();
-    $('#clapping').fadeIn();
+    $('#clapping').fadeIn('slow');
   } else if (whereamI - wheresShia <= 1) {
     $("#warning").fadeIn();
     $("#game").addClass("animated shake");
@@ -71,6 +70,7 @@ function checkForWin() {
   };
 };
 
+//turns off video and ends the game
 function endGame() {
   $('.shia').removeClass('shia');
   $('.player').removeClass('player');
@@ -78,14 +78,16 @@ function endGame() {
   $('#video').remove();
 };
 
-
+//alerts the player that they've lost.
 function shiaWins() {
-  alert("You have just been eaten by Shia Lebouf.")
-}
+  alert("You have just been eaten by Shia Lebouf.");
+};
 
+//when the player gets stuck in the bear trap, they must answer an algebra question before making it to the cabin. If they don't get it right, they lose.
 function bearTrap() {
   var whereamI = parseInt($('.player').attr('id').replace('b',''));
   if (whereamI == 15) {
+    $('#cabin').addClass('animated infinite pulse')
     var answer = prompt("But your leg! Ahh! It's caught in a bear trap! (What do you DO?)")
     if(answer == "gnaw off your leg") {
       var ans2 = prompt("Will you sucessfully gnaw your leg off?\nSolve for x: 7x + 13 = 55")
@@ -106,8 +108,8 @@ function bearTrap() {
   }
 };
 
-// shia moves on a timer, fades in and out of each box.
-// Also checks position to give warning or end game
+
+// moves Shia one cell in the maze and checks if either character has won.
   function moveShia() {
     var prevID = parseInt($('.shia').attr('id').replace('b',''));
     var prevShia = "#b" + prevID
@@ -117,11 +119,13 @@ function bearTrap() {
     checkForWin();
   };
 
+//plays start video, fades out after the intro of the song.
 setTimeout(function() {
   $("#video").fadeOut();
   $('#game').addClass('playing');
 }, 18000);
 
+//starts game when the player puts the cursor in the input box.
 $('input').click(function(){
   if ($('#game').hasClass('playing') == true) {
     window.setInterval(moveShia, 5500);
