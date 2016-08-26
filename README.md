@@ -1,5 +1,7 @@
 # escaping-shia
 
+This project was my first experience coding a project from start to finish for GA's web development class. I learned a lot about planning projects and using game logic. It was entirely front-end designed and a deployed version can be found <a href="http://echerney.github.io/escaping-shia">here</a>
+
 First off, my game will likely make no sense if you haven't seen the pop-culture classic, <a href="https://www.youtube.com/embed/o0u4M6vppCI">Rob Cantor's Shia Lebouf song.</a>
 
 My game is an interactive maze that will ask the user to solve simple math problems quickly to keep them away from Shia LeBouf, who is chasing them. The game opens showing the song this game is based on, a silly creation of Rob Cantor painting a story of actor Shia Lebouf as a cannibal chasing the main character through a forest. When the game begins, the player is shown a question chosen randomly out of an array of 25 questions. When answered correctly, the player progresses one space in the maze. 
