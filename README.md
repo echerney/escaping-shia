@@ -1,11 +1,17 @@
 # escaping-shia
 
-First off, my game will likely make no sense if you haven't seen the pop-culture classic, <a href="https://www.youtube.com/embed/o0u4M6vppCI">Rob Cantor's Shia Lebouf song. 
+This project was my first experience coding a project from start to finish for GA's web development class. I learned a lot about planning projects and using game logic. It was entirely front-end designed and a deployed version can be found <a href="http://echerney.github.io/escaping-shia">here</a>
 
-My game is an interactive maze that will ask the user to solve simple math problems quickly to keep them away from Shia LeBouf chasing them. The game opens showing the song this game is based on, a silly creation of Rob Cantor painting a story of actor Shia Lebouf as a cannibal chasing the main character through a forest. When the game begins, the player is shown a question chosen randomly out of an array of 25 questions. When answered correctly, the player progresses one space in the maze. 
+First off, my game will likely make no sense if you haven't seen the pop-culture classic, <a href="https://www.youtube.com/embed/o0u4M6vppCI">Rob Cantor's Shia Lebouf song.</a>
+
+My game is an interactive maze that will ask the user to solve simple math problems quickly to keep them away from Shia LeBouf, who is chasing them. The game opens showing the song this game is based on, a silly creation of Rob Cantor painting a story of actor Shia Lebouf as a cannibal chasing the main character through a forest. When the game begins, the player is shown a question chosen randomly out of an array of 25 questions. When answered correctly, the player progresses one space in the maze. 
+
 The maze is a table with the cells numbered by ID's of B and the number of the space in the maze. I first tried to make the ID just the number, but it created some problems with the CSS. In order to know where each character should move next, a jQuery function identifies the IDs of the character (identified by classes) and removes that class. It then removes the B and parses the string into a number, adds the B back to the ID and adds the class of the character to the cell with that ID. 
+
 Shia Lebouf is seen chasing the player with his character following at an interval of 4.5 seconds, which after some testing seemed to be enough time to solve the math problems shown but also created some pressure.
+
 Another function is run each time the player or Shia moves, and uses jQuery to check the position of both characters. If the player has made it to the end, they see a video of Shia Lebouf applauding for them. If Shia has won, the player is alerted. If Shia is only one cell behind the player, the screen shakes and a warning shows up below the input box.
+
 Before the player is able to get to the end of the maze, they get "caught in a bear trap" and must first tell the game they plan to gnaw their leg off to get away, and then answer an algebra question correctly to see if they successfully gnaw off their leg in order to escape Shia and get to the cottage at the end of the game.
 
 
